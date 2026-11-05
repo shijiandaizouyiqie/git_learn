@@ -24,11 +24,28 @@
 
 
 
-
-
 | 场景                              | 命令（优先新写法）                                      |
 | --------------------------------- | ------------------------------------------------------- |
 | 未 add，丢工作区改动              | `git restore 文件名`                                  |
 | 已 add，彻底丢掉这次改动          | `git restore --staged 文件名`  `git restore 文件名` |
 | 已 commit，撤销提交，改动保留     | `git reset --soft HEAD^`                              |
 | 已 commit，撤销提交，改动直接删除 | `git reset --hard HEAD^`                              |
+
+
+
+
+## 关联远程仓库
+
+```
+# 1. 查看当前已有的远程（检查有没有origin）
+git remote -v
+
+# 2. 如果origin已经存在、地址错了，先删掉旧的
+git remote remove origin
+
+# 3. 关联远程仓库（把链接换成你自己仓库的https地址）
+git remote add origin https://github.com/用户名/仓库名.git
+
+# 4. 推送到远程，-u 绑定本地master和远程master（第一次推送必须加-u）
+git push -u origin master
+```
