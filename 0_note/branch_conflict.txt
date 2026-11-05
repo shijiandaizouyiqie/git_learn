@@ -1,1 +1,4 @@
 这是分支冲突的master分支
+第二行,dev改这里，master不改
+第三行,master改这里，dev不改
+第四行
