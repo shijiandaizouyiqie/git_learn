@@ -21,3 +21,14 @@
 
 1. `git restore 文件`：只撤销工作区改动
 2. `git restore --staged 文件`：只撤销 add（移出暂存区，保留改动）
+
+
+
+
+
+| 场景                              | 命令（优先新写法）                                      |
+| --------------------------------- | ------------------------------------------------------- |
+| 未 add，丢工作区改动              | `git restore 文件名`                                  |
+| 已 add，彻底丢掉这次改动          | `git restore --staged 文件名`  `git restore 文件名` |
+| 已 commit，撤销提交，改动保留     | `git reset --soft HEAD^`                              |
+| 已 commit，撤销提交，改动直接删除 | `git reset --hard HEAD^`                              |
