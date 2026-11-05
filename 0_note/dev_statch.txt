@@ -1,0 +1,1 @@
+dev正在对这个文件修改，然后要切换到master进行干活，然后需要对dev的先stash，然后去master修改完后回到dev pop出来之后再继续对这个文件修改。
